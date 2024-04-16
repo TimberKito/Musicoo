@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Musicoo</string>
+    <string name="ready_to_sleep">Ready to sleep</string>
+    <string name="home_top_desc">We\'ve carefully prepared sounds for you </string>
+    <string name="data_error">Data Error</string>
+    <string name="parents_voice">Parents voice</string>
+    <string name="permission_request">Permission Request</string>
+    <string name="permission_request_desc">We need access to your audio files to allow you to select music. Please grant access to storage in order to select music files.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="feedback">Feedback</string>
+    <string name="share">Share</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="listen_music_anytime">Listen Music Anytime</string>
+    <string name="resource_loading">Resource Loading…</string>
+</resources>

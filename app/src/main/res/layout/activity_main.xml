@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_color"
+    tools:context=".activity.MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_layout"
+        android:layout_below="@+id/view" />
+
+    <LinearLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <com.lihang.ShadowLayout
+            android:id="@+id/playing_status_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:hl_cornerRadius="36dp"
+            app:hl_layoutBackground="#FF80F988"
+            app:hl_shadowColor="#40040604"
+            app:hl_shadowOffsetX="0dp"
+            app:hl_shadowOffsetY="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="78dp"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:elevation="0dp"
+                        app:cardCornerRadius="24dp"
+                        app:cardElevation="0dp">
+
+                        <ImageView
+                            android:id="@+id/audio_img"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@mipmap/breathe" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.player.musicoo.view.CircularProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="54dp"
+                        android:layout_height="54dp"
+                        android:layout_centerInParent="true" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.player.musicoo.view.MarqueeTextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:ellipsize="marquee"
+                        android:fontFamily="@font/medium_font"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <com.player.musicoo.view.MarqueeTextView
+                        android:id="@+id/desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black_60"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/alarm_clock_btn"
+                    android:layout_width="42dp"
+                    android:visibility="gone"
+                    android:layout_height="42dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/alarm_clock_icon" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/play_black_btn"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/play_status_img"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:src="@drawable/play_black_icon" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </com.lihang.ShadowLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="72dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/drw_main_bottom_bg"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/home_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/home_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/home_select_icon" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/import_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/import_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/import_unselect_icon" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

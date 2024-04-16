@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_color">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@mipmap/main_bg_img" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/bold_font_italic"
+                android:text="@string/ready_to_sleep"
+                android:textColor="@color/white"
+                android:textSize="44dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_top_desc"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/real_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                tools:itemCount="1"
+                tools:listitem="@layout/real_human_voice_layout" />
+
+            <TextView
+                android:id="@+id/sounds_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:fontFamily="@font/regular_font"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sounds_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                tools:itemCount="1"
+                tools:listitem="@layout/sounds_of_appliances_layout" />
+
+            <TextView
+                android:id="@+id/nature_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="38dp"
+                android:fontFamily="@font/regular_font"
+                android:text="@string/app_name"
+                android:textColor="@color/white"
+                android:textSize="20dp" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/nature_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                tools:itemCount="1"
+                tools:listitem="@layout/sounds_of_nature_layout" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</RelativeLayout>

@@ -1,0 +1,99 @@
+{
+  "categories": [
+    {
+      "name": "Real human voice",
+      "audios": [
+        {
+          "name": "Breathe",
+          "file": "Real human voice/Breathe.mp3",
+          "image": "Real human voice pic/Breathe.png"
+        },
+        {
+          "name": "Shh Shh",
+          "file": "Real human voice/Shh Shh.mp3",
+          "image": "Real human voice pic/Shh Shh.png"
+        },
+        {
+          "name": "Shhh...",
+          "file": "Real human voice/Shhh….mp3",
+          "image": "Real human voice pic/Shhh….png"
+        }
+      ]
+    },
+    {
+      "name": "Sounds of appliances",
+      "audios": [
+        {
+          "name": "Fireplace",
+          "file": "Sounds of appliances/Fireplace.mp3",
+          "image": "Sounds of appliances pic/Fireplace.png"
+        },
+        {
+          "name": "Mountain stream",
+          "file": "Sounds of appliances/Mountain stream.mp3",
+          "image": "Sounds of appliances pic/Mountain stream.png"
+        },
+        {
+          "name": "TV",
+          "file": "Sounds of appliances/TV.mp3",
+          "image": "Sounds of appliances pic/TV.png"
+        },
+        {
+          "name": "Water droplet",
+          "file": "Sounds of appliances/Water droplet.mp3",
+          "image": "Sounds of appliances pic/Water droplet.png"
+        }
+      ]
+    },
+    {
+      "name": "Sounds of nature",
+      "audios": [
+        {
+          "name": "Beach",
+          "file": "Sounds of nature/Beach.mp3",
+          "image": "Sounds of nature pic/Beach.png"
+        },
+        {
+          "name": "Call of Seagulls",
+          "file": "Sounds of nature/Call of Seagulls.mp3",
+          "image": "Sounds of nature pic/Call of Seagulls.png"
+        },
+        {
+          "name": "Chirping of Birds",
+          "file": "Sounds of nature/Chirping of Birds.mp3",
+          "image": "Sounds of nature pic/Chirping of Birds.png"
+        },
+        {
+          "name": "Cicada Chirping",
+          "file": "Sounds of nature/Cicada Chirping.mp3",
+          "image": "Sounds of nature pic/Cicada Chirping.png"
+        },
+        {
+          "name": "Howling Wind",
+          "file": "Sounds of nature/Howling Wind.mp3",
+          "image": "Sounds of nature pic/Howling Wind.png"
+        },
+        {
+          "name": "Nocturnal Insects",
+          "file": "Sounds of nature/Nocturnal Insects.mp3",
+          "image": "Sounds of nature pic/Nocturnal Insects.png"
+        },
+        {
+          "name": "Seawater Surging",
+          "file": "Sounds of nature/Seawater Surging.mp3",
+          "image": "Sounds of nature pic/Seawater Surging.png"
+        },
+        {
+          "name": "Summer Insects",
+          "file": "Sounds of nature/Summer Insects.mp3",
+          "image": "Sounds of nature pic/Summer Insects.png"
+        },
+        {
+          "name": "waterfall",
+          "file": "Sounds of nature/waterfall.mp3",
+          "image": "Sounds of nature pic/waterfall.png"
+        }
+      ]
+    }
+  ]
+}
