@@ -9,8 +9,8 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.player.musicoo"
-        minSdk = 24
+        applicationId = "com.player.musicoo.timber"
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0.1"

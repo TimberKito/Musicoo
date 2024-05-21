@@ -19,6 +19,7 @@ import com.player.musicoo.bean.Audio
 import com.player.musicoo.databinding.ActivityMainBinding
 import com.player.musicoo.fragment.HomeFragment
 import com.player.musicoo.fragment.ImportFragment
+import com.player.musicoo.fragment.SettingsFragment
 import com.player.musicoo.media.MediaControllerManager
 import com.player.musicoo.util.convertMillisToMinutesAndSecondsString
 import com.player.musicoo.util.getAudioDurationFromAssets
@@ -60,7 +61,7 @@ class MainActivity : BaseActivity() {
             binding.playingStatusLayout.visibility = View.VISIBLE
             val currentAudio = App.currentPlayingAudio
 
-            Log.d("ocean","main currentAudio->$currentAudio")
+            Log.d("ocean", "main currentAudio->$currentAudio")
             val maxProgress = try {
                 getAudioDurationFromAssets(this, currentAudio?.file!!)
             } catch (e: Exception) {
@@ -99,6 +100,12 @@ class MainActivity : BaseActivity() {
             changeFragment(1)
             updateBtnState(1)
         }
+
+        binding.appSetting.setOnClickListener {
+            changeFragment(2)
+            updateBtnState(2)
+        }
+
         binding.playingStatusLayout.setOnClickListener {
             val currentAudio = App.currentPlayingAudio
             val duration = try {
@@ -173,6 +180,7 @@ class MainActivity : BaseActivity() {
         mFragments.clear()
         mFragments.add(HomeFragment())
         mFragments.add(ImportFragment())
+        mFragments.add(SettingsFragment())
         changeFragment(0)
         updateBtnState(0)
     }
@@ -203,14 +211,20 @@ class MainActivity : BaseActivity() {
         binding.apply {
             homeImg.setImageResource(
                 when (index) {
-                    0 -> R.drawable.home_select_icon
-                    else -> R.drawable.home_unselect_icon
+                    0 -> R.drawable.svg_home_on
+                    else -> R.drawable.svg_home
                 }
             )
             importImg.setImageResource(
                 when (index) {
-                    1 -> R.drawable.import_select_icon
-                    else -> R.drawable.import_unselect_icon
+                    1 -> R.drawable.collect_selected_on
+                    else -> R.drawable.collect_selected
+                }
+            )
+            homeSetting.setImageResource(
+                when (index) {
+                    2 -> R.drawable.svg_setting_on
+                    else -> R.drawable.svg_setting
                 }
             )
         }

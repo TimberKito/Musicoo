@@ -26,8 +26,8 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun initImmersionBar() {
         immersionBar {
-            statusBarDarkFont(false)
-            statusBarView(binding.view)
+            statusBarDarkFont(true)
+//            statusBarView(binding.view)
         }
     }
 

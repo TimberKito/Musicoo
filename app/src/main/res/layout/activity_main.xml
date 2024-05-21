@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_bg_color"
+    android:background="@color/blue_bg_color"
     tools:context=".activity.MainActivity">
 
     <View
@@ -30,17 +30,17 @@
             android:id="@+id/playing_status_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginEnd="12dp"
-            app:hl_cornerRadius="36dp"
-            app:hl_layoutBackground="#FF80F988"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:hl_cornerRadius="12dp"
+            app:hl_layoutBackground="@color/blue"
             app:hl_shadowColor="#40040604"
             app:hl_shadowOffsetX="0dp"
             app:hl_shadowOffsetY="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="78dp"
+                android:layout_height="48dp"
                 android:layout_alignParentBottom="true"
                 android:gravity="center_vertical"
                 android:paddingStart="20dp"
@@ -60,24 +60,24 @@
 
                         <ImageView
                             android:id="@+id/audio_img"
-                            android:layout_width="48dp"
-                            android:layout_height="48dp"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
                             android:src="@mipmap/breathe" />
 
                     </androidx.cardview.widget.CardView>
 
                     <com.player.musicoo.view.CircularProgressBar
                         android:id="@+id/progressBar"
-                        android:layout_width="54dp"
-                        android:layout_height="54dp"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
                         android:layout_centerInParent="true" />
                 </RelativeLayout>
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
                     android:orientation="vertical">
@@ -86,12 +86,12 @@
                         android:id="@+id/name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:maxLines="1"
                         android:ellipsize="marquee"
                         android:fontFamily="@font/medium_font"
+                        android:maxLines="1"
                         android:text="@string/app_name"
-                        android:textColor="@color/black"
-                        android:textSize="16dp" />
+                        android:textColor="@color/white"
+                        android:textSize="14sp" />
 
                     <com.player.musicoo.view.MarqueeTextView
                         android:id="@+id/desc"
@@ -99,17 +99,17 @@
                         android:layout_height="wrap_content"
                         android:maxLines="1"
                         android:text="@string/app_name"
-                        android:textColor="@color/black_60"
-                        android:textSize="12dp" />
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
 
                 </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/alarm_clock_btn"
                     android:layout_width="42dp"
-                    android:visibility="gone"
                     android:layout_height="42dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:visibility="gone">
 
                     <ImageView
                         android:layout_width="34dp"
@@ -137,11 +137,14 @@
 
         <RelativeLayout
             android:id="@+id/tab_layout"
+            android:layout_marginTop="4dp"
             android:layout_width="match_parent"
-            android:layout_height="72dp">
+            android:backgroundTint="@color/white"
+            android:layout_height="54dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:paddingBottom="10dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/drw_main_bottom_bg"
                 android:orientation="horizontal">
@@ -151,13 +154,22 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/home_img"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:padding="2dp"
+                        android:src="@drawable/selector_home" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/home_select_icon" />
+                        android:text="@string/home_bt_home"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -165,15 +177,47 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageView
                         android:id="@+id/import_img"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/selector_collect" />
+
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/import_unselect_icon" />
+                        android:text="@string/home_bt_collect"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/app_setting"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/home_setting"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:src="@drawable/selector_setting" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home_bt_setting"
+                        android:textColor="@color/black"
+                        android:textSize="11sp" />
                 </LinearLayout>
             </LinearLayout>
+
+
         </RelativeLayout>
 
     </LinearLayout>

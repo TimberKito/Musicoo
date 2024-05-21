@@ -13,8 +13,8 @@ class AboutActivity : BaseActivity() {
         binding = ActivityAboutBinding.inflate(layoutInflater)
         setContentView(binding.root)
         immersionBar {
-            statusBarDarkFont(false)
-            statusBarView(binding.view)
+            statusBarDarkFont(true)
+//            statusBarView(binding.view)
         }
         binding.versionTv.text = "Version: " + getAppVersion(this)
         binding.backBtn.setOnClickListener {

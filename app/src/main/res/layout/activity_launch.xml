@@ -1,53 +1,50 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/white"
+    tools:context=".activity.LaunchActivity">
 
-    <View
-        android:id="@+id/view"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp" />
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/relative"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="12dp">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@mipmap/splash_bg_img" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/musicoo_logo_img" />
+        </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="260dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="48dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="60dp"
             android:gravity="center"
-            android:orientation="vertical">
+            android:lineSpacingExtra="20dp"
+            android:lineSpacingMultiplier="0.6"
+            android:text="@string/app_name"
+            android:textColor="@color/blue"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/listen_music_anytime"
-                android:textColor="#CCFFFFFF"
-                android:textSize="16dp" />
+    <ProgressBar
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="110dp"
+        android:indeterminateTint="@color/blue"
+        android:visibility="visible" />
 
-            <com.player.musicoo.view.CustomProgressBar
-                android:id="@+id/customProgressBar"
-                android:layout_width="190dp"
-                android:layout_height="6dp"
-                android:layout_marginTop="10dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:text="@string/resource_loading"
-                android:textColor="#99FFFFFF"
-                android:textSize="12dp" />
-        </LinearLayout>
-    </RelativeLayout>
-</LinearLayout>
+</FrameLayout>

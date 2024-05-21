@@ -16,4 +16,8 @@
     <string name="terms_of_service">Terms of Service</string>
     <string name="listen_music_anytime">Listen Music Anytime</string>
     <string name="resource_loading">Resource Loading…</string>
+
+    <string name="home_bt_home">Home</string>
+    <string name="home_bt_collect">Collect</string>
+    <string name="home_bt_setting">Setting</string>
 </resources>
