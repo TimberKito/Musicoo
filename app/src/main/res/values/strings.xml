@@ -19,5 +19,8 @@
 
     <string name="home_bt_home">Home</string>
     <string name="home_bt_collect">Collect</string>
+    <string name="home_bt_import">Import</string>
     <string name="home_bt_setting">Setting</string>
+    <string name="import_null">You haven\'t imported your audio yet!</string>
+
 </resources>

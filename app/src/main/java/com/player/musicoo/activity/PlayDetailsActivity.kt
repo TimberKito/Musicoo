@@ -23,7 +23,7 @@ import com.google.android.material.slider.Slider.OnChangeListener
 import com.gyf.immersionbar.ktx.immersionBar
 import com.player.musicoo.R
 import com.player.musicoo.bean.Audio
-import com.player.musicoo.databinding.ActivityPlayDetailsBinding
+import com.player.musicoo.databinding.ActivityPlayDetails2Binding
 import com.player.musicoo.media.MediaControllerManager
 import com.player.musicoo.util.containsContent
 import com.player.musicoo.util.convertMillisToMinutesAndSecondsString
@@ -37,14 +37,14 @@ class PlayDetailsActivity : BaseActivity() {
         const val KEY_DETAILS_AUDIO = "key_details_audio"
     }
 
-    private lateinit var binding: ActivityPlayDetailsBinding
+    private lateinit var binding: ActivityPlayDetails2Binding
     private var audio: Audio? = null
     private var rotationAnimator: ValueAnimator? = null
 
     @SuppressLint("ForegroundServiceType")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPlayDetailsBinding.inflate(layoutInflater)
+        binding = ActivityPlayDetails2Binding.inflate(layoutInflater)
         setContentView(binding.root)
         initImmersionBar()
         audio = intent.getSerializableExtra(KEY_DETAILS_AUDIO) as Audio?
@@ -59,8 +59,8 @@ class PlayDetailsActivity : BaseActivity() {
 
     private fun initImmersionBar() {
         immersionBar {
-            statusBarDarkFont(false)
-            statusBarView(binding.view)
+            statusBarDarkFont(true)
+//            statusBarView(binding.view)
         }
     }
 
@@ -73,16 +73,16 @@ class PlayDetailsActivity : BaseActivity() {
                 .into(binding.image)
             val bitmap = loadBitmapFromAsset(this, audio?.image!!)
             val blurredBitmap = applyGaussianBlur(bitmap, 25f, this)
-            binding.imageView.setImageBitmap(blurredBitmap)
+//            binding.imageView.setImageBitmap(blurredBitmap)
 
         } else {
             binding.image.setImageResource(R.mipmap.musicoo_logo_img)
             val bitmap = loadBitmapFromAsset(R.mipmap.musicoo_logo_img)
             val blurredBitmap = applyGaussianBlur(bitmap, 25f, this)
-            binding.imageView.setImageBitmap(blurredBitmap)
+//            binding.imageView.setImageBitmap(blurredBitmap)
         }
         binding.seekBar.value = 0f
-        binding.title.text = ""
+        binding.title.text = audio?.name
         binding.nameTv.text = audio?.name
         binding.descTv.text = audio?.name
         if (containsContent(audio?.file!!)) {

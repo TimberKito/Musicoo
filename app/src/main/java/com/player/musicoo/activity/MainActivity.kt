@@ -217,8 +217,8 @@ class MainActivity : BaseActivity() {
             )
             importImg.setImageResource(
                 when (index) {
-                    1 -> R.drawable.collect_selected_on
-                    else -> R.drawable.collect_selected
+                    1 -> R.drawable.svg_import_on
+                    else -> R.drawable.svg_import
                 }
             )
             homeSetting.setImageResource(

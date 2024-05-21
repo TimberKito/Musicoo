@@ -6,7 +6,6 @@ import android.app.AlertDialog
 import android.content.ContentResolver
 import android.content.ContentUris
 import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.media.MediaPlayer
 import android.net.Uri
@@ -16,7 +15,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -24,18 +22,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.gyf.immersionbar.ktx.immersionBar
 import com.player.musicoo.App
 import com.player.musicoo.R
-import com.player.musicoo.activity.SettingsActivity
 import com.player.musicoo.adapter.ParentsVoiceAdapter
 import com.player.musicoo.bean.Audio
-import com.player.musicoo.databinding.FragmentImportBinding
-import com.player.musicoo.util.uriToFile
+import com.player.musicoo.databinding.FragmentImport2Binding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class ImportFragment : Fragment() {
-    private lateinit var binding: FragmentImportBinding
+    private lateinit var binding: FragmentImport2Binding
     private var parentsVoiceAdapter: ParentsVoiceAdapter? = null
     private var importAdapterList: MutableList<Audio> = mutableListOf()
 
@@ -44,7 +40,7 @@ class ImportFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentImportBinding.inflate(layoutInflater)
+        binding = FragmentImport2Binding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -54,9 +50,9 @@ class ImportFragment : Fragment() {
     }
 
     private fun initView() {
-        binding.settingBtn.setOnClickListener {
-            startActivity(Intent(requireActivity(), SettingsActivity::class.java))
-        }
+//        binding.settingBtn.setOnClickListener {
+//            startActivity(Intent(requireActivity(), SettingsActivity::class.java))
+//        }
         binding.addBtn.setOnClickListener {
             binding.addBtn.visibility = View.GONE
             if (ContextCompat.checkSelfPermission(
@@ -139,8 +135,8 @@ class ImportFragment : Fragment() {
 
     private fun initImmersionBar() {
         immersionBar {
-            statusBarDarkFont(false)
-            statusBarView(binding.view)
+            statusBarDarkFont(true)
+//            statusBarView(binding.view)
         }
     }
 
