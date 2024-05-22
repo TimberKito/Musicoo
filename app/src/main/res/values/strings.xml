@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Musicoo</string>
     <string name="ready_to_sleep">Ready to sleep</string>
-    <string name="home_top_desc">We\'ve carefully prepared sounds for you </string>
+    <string name="home_top_desc">Have prepared the sound for you</string>
     <string name="data_error">Data Error</string>
     <string name="parents_voice">Parents voice</string>
     <string name="permission_request">Permission Request</string>

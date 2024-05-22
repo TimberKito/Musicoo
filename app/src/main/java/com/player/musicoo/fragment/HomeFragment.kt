@@ -14,12 +14,13 @@ import com.player.musicoo.R
 import com.player.musicoo.adapter.RealHumanVoiceAdapter
 import com.player.musicoo.adapter.SoundsOfAppliancesAdapter
 import com.player.musicoo.adapter.SoundsOfNatureAdapter
+import com.player.musicoo.databinding.FragmentHome2Binding
 import com.player.musicoo.databinding.FragmentHomeBinding
 import com.player.musicoo.util.GridSpacingItemDecoration
 import com.player.musicoo.util.HorizontalSpaceItemDecoration
 
 class HomeFragment : Fragment() {
-    private lateinit var binding: FragmentHomeBinding
+    private lateinit var binding: FragmentHome2Binding
     private var realHumanVoiceAdapter: RealHumanVoiceAdapter? = null
     private var soundsOfAppliancesAdapter: SoundsOfAppliancesAdapter? = null
     private var soundsOfNatureAdapter: SoundsOfNatureAdapter? = null
@@ -28,7 +29,7 @@ class HomeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(layoutInflater)
+        binding = FragmentHome2Binding.inflate(layoutInflater)
         return binding.root
     }
 
@@ -39,8 +40,8 @@ class HomeFragment : Fragment() {
 
     private fun initImmersionBar() {
         immersionBar {
-            statusBarDarkFont(false)
-            statusBarView(binding.view)
+            statusBarDarkFont(true)
+//            statusBarView(binding.view)
         }
     }
 
