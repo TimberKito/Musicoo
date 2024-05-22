@@ -129,7 +129,7 @@
                         android:id="@+id/play_status_img"
                         android:layout_width="34dp"
                         android:layout_height="34dp"
-                        android:src="@drawable/play_black_icon" />
+                        android:src="@drawable/play_black_icon2" />
 
                 </LinearLayout>
             </LinearLayout>
@@ -185,12 +185,12 @@
                         android:id="@+id/import_img"
                         android:layout_width="26dp"
                         android:layout_height="26dp"
-                        android:src="@drawable/svg_import" />
+                        android:src="@drawable/selector_collect" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/home_bt_import"
+                        android:text="@string/home_bt_collect"
                         android:textColor="@color/black"
                         android:textSize="11sp" />
                 </LinearLayout>

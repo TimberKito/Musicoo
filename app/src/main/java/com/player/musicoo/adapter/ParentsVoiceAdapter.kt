@@ -57,8 +57,8 @@ class ParentsVoiceAdapter(
                 if (App.currentPlayingAudio != null) {
                     if (App.currentPlayingAudio?.file == audio.file) {
                         playingLayout.visibility = View.VISIBLE
-                        name.setTextColor(context.getColor(R.color.green))
-                        desc.setTextColor(context.getColor(R.color.green))
+                        name.setTextColor(context.getColor(R.color.blue))
+                        desc.setTextColor(context.getColor(R.color.blue))
                     } else {
                         playingLayout.visibility = View.GONE
                         name.setTextColor(context.getColor(R.color.white))

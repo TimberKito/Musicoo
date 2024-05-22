@@ -53,8 +53,8 @@ class RealHumanVoiceAdapter(
                 if (App.currentPlayingAudio != null) {
                     if (App.currentPlayingAudio?.file == audio.file) {
                         stateImg.setImageResource(R.drawable.playing_white_icon)
-                        name.setTextColor(context.getColor(R.color.green))
-                        desc.setTextColor(context.getColor(R.color.green))
+                        name.setTextColor(context.getColor(R.color.white))
+                        desc.setTextColor(context.getColor(R.color.white))
                     } else {
                         stateImg.setImageResource(R.drawable.play_white_icon)
                         name.setTextColor(context.getColor(R.color.white))

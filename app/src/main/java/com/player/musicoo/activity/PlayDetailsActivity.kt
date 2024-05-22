@@ -14,24 +14,31 @@ import android.renderscript.Element
 import android.renderscript.RenderScript
 import android.renderscript.ScriptIntrinsicBlur
 import android.util.Log
+import android.view.View
 import android.widget.Toast
 import androidx.annotation.OptIn
 import androidx.media3.common.Player
 import androidx.media3.common.util.UnstableApi
+import androidx.room.Room
 import com.bumptech.glide.Glide
 import com.google.android.material.slider.Slider.OnChangeListener
 import com.gyf.immersionbar.ktx.immersionBar
+import com.player.musicoo.App
 import com.player.musicoo.R
 import com.player.musicoo.bean.Audio
+import com.player.musicoo.database.AppDatabase
 import com.player.musicoo.databinding.ActivityPlayDetails2Binding
 import com.player.musicoo.media.MediaControllerManager
 import com.player.musicoo.util.containsContent
 import com.player.musicoo.util.convertMillisToMinutesAndSecondsString
 import com.player.musicoo.util.getAudioDurationFromAssets
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import java.io.IOException
 import java.io.InputStream
 
-class PlayDetailsActivity : BaseActivity() {
+class PlayDetailsActivity : BaseActivity(), View.OnClickListener {
 
     companion object {
         const val KEY_DETAILS_AUDIO = "key_details_audio"
@@ -40,6 +47,13 @@ class PlayDetailsActivity : BaseActivity() {
     private lateinit var binding: ActivityPlayDetails2Binding
     private var audio: Audio? = null
     private var rotationAnimator: ValueAnimator? = null
+
+
+    private val database = Room.databaseBuilder(
+        App.appContext, AppDatabase::class.java, "local_audio_viewer_database"
+    ).build()
+
+    private val audioFileDao = database.localAudioDao()
 
     @SuppressLint("ForegroundServiceType")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -52,6 +66,7 @@ class PlayDetailsActivity : BaseActivity() {
             onBackPressed()
             Toast.makeText(this, getString(R.string.data_error), Toast.LENGTH_SHORT).show()
         }
+        binding.playLike.isSelected = audio?.collect!!
         Log.d("ocean", "PlayDetailsActivity audio->$audio")
         initView()
 
@@ -85,6 +100,7 @@ class PlayDetailsActivity : BaseActivity() {
         binding.title.text = audio?.name
         binding.nameTv.text = audio?.name
         binding.descTv.text = audio?.name
+
         if (containsContent(audio?.file!!)) {
             binding.totalDurationTv.text = convertMillisToMinutesAndSecondsString(audio?.duration!!)
             binding.seekBar.valueTo = audio?.duration!!.toFloat()
@@ -98,6 +114,11 @@ class PlayDetailsActivity : BaseActivity() {
         binding.backBtn.setOnClickListener {
             onBackPressed()
         }
+
+
+
+        binding.playLike.setOnClickListener(this)
+
         val currentPlayer = MediaControllerManager.getController()
         currentPlayer?.addListener(object : Player.Listener {
             override fun onPlayWhenReadyChanged(
@@ -260,6 +281,37 @@ class PlayDetailsActivity : BaseActivity() {
                 binding.seekBar.value = currentPosition.toFloat()
 
                 sendEmptyMessageDelayed(1, 1000)
+            }
+        }
+    }
+
+    override fun onClick(v: View?) {
+        when (v) {
+            binding.playLike -> {
+                if (!binding.playLike.isSelected) {
+                    binding.playLike.isSelected = !binding.playLike.isSelected
+                    Toast.makeText(
+                        this@PlayDetailsActivity, "You have collected this sound.", Toast.LENGTH_SHORT
+                    ).show()
+                    CoroutineScope(Dispatchers.IO).launch {
+
+                        audio?.apply {
+                            collect = binding.playLike.isSelected
+                        }?.let { it1 -> audioFileDao.insertAudioFile(it1) }
+                    }
+
+                } else {
+                    binding.playLike.isSelected = !binding.playLike.isSelected
+                    Toast.makeText(
+                        this@PlayDetailsActivity, "You have unfavorite this sound.", Toast.LENGTH_SHORT
+                    ).show()
+                    CoroutineScope(Dispatchers.IO).launch {
+
+                        audio?.apply {
+                            collect = binding.playLike.isSelected
+                        }?.let { it1 -> audioFileDao.deleteAudioFile(it1) }
+                    }
+                }
             }
         }
     }

@@ -21,6 +21,7 @@ import java.io.InputStreamReader
 
 class App : Application() {
     companion object {
+        lateinit var appContext: Context
         lateinit var app: App
             private set
         lateinit var currentAudioManager: CurrentAudioManager
@@ -100,6 +101,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         app = this
+        appContext = this
         initialize(this)
         MediaControllerManager.init(this)
         currentAudioManager = CurrentAudioManager.getInstance(this)

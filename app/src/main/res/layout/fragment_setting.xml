@@ -66,46 +66,46 @@
 
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="28dp"
-        app:cardCornerRadius="12dp">
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_marginStart="28dp"-->
+    <!--        android:layout_marginTop="18dp"-->
+    <!--        android:layout_marginEnd="28dp"-->
+    <!--        app:cardCornerRadius="12dp">-->
 
-        <LinearLayout
-            android:id="@+id/feedback_btn"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/feedback_btn"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:orientation="horizontal">-->
 
-            <ImageView
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_marginStart="25dp"
-                android:src="@drawable/svg_email" />
+    <!--            <ImageView-->
+    <!--                android:layout_width="27dp"-->
+    <!--                android:layout_height="27dp"-->
+    <!--                android:layout_marginStart="25dp"-->
+    <!--                android:src="@drawable/svg_email" />-->
 
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="@string/feedback"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:text="@string/feedback"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="14sp" />-->
 
-            <ImageView
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_marginEnd="16dp"
-                android:padding="2dp"
-                android:src="@drawable/svg_go" />
-        </LinearLayout>
+    <!--            <ImageView-->
+    <!--                android:layout_width="27dp"-->
+    <!--                android:layout_height="27dp"-->
+    <!--                android:layout_marginEnd="16dp"-->
+    <!--                android:padding="2dp"-->
+    <!--                android:src="@drawable/svg_go" />-->
+    <!--        </LinearLayout>-->
 
-    </androidx.cardview.widget.CardView>
+    <!--    </androidx.cardview.widget.CardView>-->
 
 
     <androidx.cardview.widget.CardView
@@ -150,6 +150,88 @@
     </androidx.cardview.widget.CardView>
 
 
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_marginStart="28dp"-->
+    <!--        android:layout_marginTop="18dp"-->
+    <!--        android:layout_marginEnd="28dp"-->
+    <!--        app:cardCornerRadius="12dp">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/pp_btn"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="27dp"-->
+    <!--                android:layout_height="27dp"-->
+    <!--                android:layout_marginStart="25dp"-->
+    <!--                android:src="@drawable/svg_lock" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:text="@string/privacy_policy"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="27dp"-->
+    <!--                android:layout_height="27dp"-->
+    <!--                android:layout_marginEnd="16dp"-->
+    <!--                android:padding="2dp"-->
+    <!--                android:src="@drawable/svg_go" />-->
+    <!--        </LinearLayout>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+
+
+    <!--    <androidx.cardview.widget.CardView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="60dp"-->
+    <!--        android:layout_marginStart="28dp"-->
+    <!--        android:layout_marginTop="18dp"-->
+    <!--        android:layout_marginEnd="28dp"-->
+    <!--        app:cardCornerRadius="12dp">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/tos_btn"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:gravity="center_vertical"-->
+    <!--            android:orientation="horizontal">-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="27dp"-->
+    <!--                android:layout_height="27dp"-->
+    <!--                android:layout_marginStart="25dp"-->
+    <!--                android:src="@drawable/svg_detail" />-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="0dp"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginStart="20dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:gravity="center_vertical"-->
+    <!--                android:text="@string/terms_of_service"-->
+    <!--                android:textColor="@color/black"-->
+    <!--                android:textSize="14sp" />-->
+
+    <!--            <ImageView-->
+    <!--                android:layout_width="27dp"-->
+    <!--                android:layout_height="27dp"-->
+    <!--                android:layout_marginEnd="16dp"-->
+    <!--                android:padding="2dp"-->
+    <!--                android:src="@drawable/svg_go" />-->
+    <!--        </LinearLayout>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="60dp"
@@ -159,7 +241,7 @@
         app:cardCornerRadius="12dp">
 
         <LinearLayout
-            android:id="@+id/pp_btn"
+            android:id="@+id/delete_all"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -169,7 +251,7 @@
                 android:layout_width="27dp"
                 android:layout_height="27dp"
                 android:layout_marginStart="25dp"
-                android:src="@drawable/svg_lock" />
+                android:src="@drawable/svg_delete" />
 
             <TextView
                 android:layout_width="0dp"
@@ -177,7 +259,7 @@
                 android:layout_marginStart="20dp"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="@string/privacy_policy"
+                android:text="@string/delete_all"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -188,47 +270,7 @@
                 android:padding="2dp"
                 android:src="@drawable/svg_go" />
         </LinearLayout>
-    </androidx.cardview.widget.CardView>
 
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="28dp"
-        app:cardCornerRadius="12dp">
-
-        <LinearLayout
-            android:id="@+id/tos_btn"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_marginStart="25dp"
-                android:src="@drawable/svg_detail" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:text="@string/terms_of_service"
-                android:textColor="@color/black"
-                android:textSize="14sp" />
-
-            <ImageView
-                android:layout_width="27dp"
-                android:layout_height="27dp"
-                android:layout_marginEnd="16dp"
-                android:padding="2dp"
-                android:src="@drawable/svg_go" />
-        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
 

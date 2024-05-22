@@ -21,6 +21,10 @@
     <string name="home_bt_collect">Collect</string>
     <string name="home_bt_import">Import</string>
     <string name="home_bt_setting">Setting</string>
-    <string name="import_null">You haven\'t imported your audio yet!</string>
+    <string name="import_null">You have not collected yet!</string>
+
+    <string name="collect_title">My Collect</string>
+
+    <string name="delete_all">Clear all collections</string>
 
 </resources>

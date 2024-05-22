@@ -1,5 +1,3 @@
-
-
 package com.player.musicoo.database
 
 import androidx.room.*
@@ -31,4 +29,10 @@ interface LocalAudioDao {
 
     @Query("SELECT * FROM Audio WHERE selected = 1")
     suspend fun getAudioBySelected(): List<Audio>
+
+    @Query("update Audio set collect = 0")
+    suspend fun deleteAllCollect()
+
+    @Query("select * from Audio where collect = :collect ")
+    suspend fun getCollectData(collect: Boolean = true): List<Audio>
 }

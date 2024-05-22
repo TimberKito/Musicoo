@@ -13,7 +13,8 @@ data class Audio(
     @ColumnInfo(name = "file") var file: String,
     @ColumnInfo(name = "image") var image: String,
     @ColumnInfo(name = "duration") var duration: Long,
-    @ColumnInfo(name = "selected") var selected: Boolean
+    @ColumnInfo(name = "selected") var selected: Boolean,
+    @ColumnInfo(name = "collect") var collect: Boolean = false
 ) : Serializable {
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0

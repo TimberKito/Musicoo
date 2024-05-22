@@ -17,11 +17,10 @@ import com.player.musicoo.App
 import com.player.musicoo.R
 import com.player.musicoo.bean.Audio
 import com.player.musicoo.databinding.ActivityMainBinding
+import com.player.musicoo.fragment.CollectFragment
 import com.player.musicoo.fragment.HomeFragment
-import com.player.musicoo.fragment.ImportFragment
 import com.player.musicoo.fragment.SettingsFragment
 import com.player.musicoo.media.MediaControllerManager
-import com.player.musicoo.util.convertMillisToMinutesAndSecondsString
 import com.player.musicoo.util.getAudioDurationFromAssets
 
 
@@ -172,14 +171,14 @@ class MainActivity : BaseActivity() {
         if (b) {
             binding.playStatusImg.setImageResource(R.drawable.playing_black_icon)
         } else {
-            binding.playStatusImg.setImageResource(R.drawable.play_black_icon)
+            binding.playStatusImg.setImageResource(R.drawable.play_black_icon2)
         }
     }
 
     private fun initFragment() {
         mFragments.clear()
         mFragments.add(HomeFragment())
-        mFragments.add(ImportFragment())
+        mFragments.add(CollectFragment())
         mFragments.add(SettingsFragment())
         changeFragment(0)
         updateBtnState(0)
@@ -217,8 +216,8 @@ class MainActivity : BaseActivity() {
             )
             importImg.setImageResource(
                 when (index) {
-                    1 -> R.drawable.svg_import_on
-                    else -> R.drawable.svg_import
+                    1 -> R.drawable.collect_selected_on
+                    else -> R.drawable.collect_selected
                 }
             )
             homeSetting.setImageResource(
