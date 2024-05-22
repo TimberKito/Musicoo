@@ -90,9 +90,9 @@ class App : Application() {
 
             for (category in resourcesList.categories) {
                 when (category.name) {
-                    "Real human voice" -> realHumanVoiceList = category.audios
-                    "Sounds of appliances" -> soundsOfAppliancesList = category.audios
-                    "Sounds of nature" -> soundsOfNatureList = category.audios
+                    "Sound of instrument" -> realHumanVoiceList = category.audios
+                    "White noise" -> soundsOfAppliancesList = category.audios
+                    "Voice of Nature" -> soundsOfNatureList = category.audios
                 }
             }
         }

@@ -1,97 +1,82 @@
 {
   "categories": [
     {
-      "name": "Real human voice",
+      "name": "Sound of instrument",
       "audios": [
         {
-          "name": "Breathe",
-          "file": "Real human voice/Breathe.mp3",
-          "image": "Real human voice pic/Breathe.png"
+          "name": "Big Ben",
+          "file": "Sound of instrument data/Big Ben.mp3",
+          "image": "Sound of instrument/Big Ben.jpg"
         },
         {
-          "name": "Shh Shh",
-          "file": "Real human voice/Shh Shh.mp3",
-          "image": "Real human voice pic/Shh Shh.png"
+          "name": "Guitar sound",
+          "file": "Sound of instrument data/Guitar sound.mp3",
+          "image": "Sound of instrument/Guitar sound.jpg"
         },
         {
-          "name": "Shhh...",
-          "file": "Real human voice/Shhh….mp3",
-          "image": "Real human voice pic/Shhh….png"
+          "name": "Piano",
+          "file": "Sound of instrument data/Piano.mp3",
+          "image": "Sound of instrument/Piano.png"
+        },
+        {
+          "name": "The sound of mixing cup",
+          "file": "Sound of instrument data/The sound of mixing cup.mp3",
+          "image": "Sound of instrument/The sound of mixing cup.png"
         }
       ]
     },
     {
-      "name": "Sounds of appliances",
+      "name": "White noise",
       "audios": [
         {
-          "name": "Fireplace",
-          "file": "Sounds of appliances/Fireplace.mp3",
-          "image": "Sounds of appliances pic/Fireplace.png"
+          "name": "High -speed car",
+          "file": "White noise data/High -speed car.mp3",
+          "image": "White noise/High -speed car.png"
         },
         {
-          "name": "Mountain stream",
-          "file": "Sounds of appliances/Mountain stream.mp3",
-          "image": "Sounds of appliances pic/Mountain stream.png"
+          "name": "High -voltage wire",
+          "file": "White noise data/High -voltage wire.mp3",
+          "image": "White noise/High -voltage wire.jpg"
         },
         {
-          "name": "TV",
-          "file": "Sounds of appliances/TV.mp3",
-          "image": "Sounds of appliances pic/TV.png"
+          "name": "Mechanical failure",
+          "file": "White noise data/Mechanical failure.mp3",
+          "image": "White noise/Mechanical failure.png"
         },
         {
-          "name": "Water droplet",
-          "file": "Sounds of appliances/Water droplet.mp3",
-          "image": "Sounds of appliances pic/Water droplet.png"
+          "name": "Rhythm",
+          "file": "White noise data/Rhythm.mp3",
+          "image": "White noise/Rhythm.jpg"
         }
       ]
     },
     {
-      "name": "Sounds of nature",
+      "name": "Voice of Nature",
       "audios": [
         {
-          "name": "Beach",
-          "file": "Sounds of nature/Beach.mp3",
-          "image": "Sounds of nature pic/Beach.png"
+          "name": "Flowing water",
+          "file": "Voice of Nature data/Flowing water.mp3",
+          "image": "Voice of Nature/Flowing water.jpg"
         },
         {
-          "name": "Call of Seagulls",
-          "file": "Sounds of nature/Call of Seagulls.mp3",
-          "image": "Sounds of nature pic/Call of Seagulls.png"
+          "name": "High -speed stream",
+          "file": "Voice of Nature data/High -speed stream.mp3",
+          "image": "Voice of Nature/High -speed stream.jpg"
         },
         {
-          "name": "Chirping of Birds",
-          "file": "Sounds of nature/Chirping of Birds.mp3",
-          "image": "Sounds of nature pic/Chirping of Birds.png"
+          "name": "Hundred Birds Calling",
+          "file": "Voice of Nature data/Hundred Birds Calling.mp3",
+          "image": "Voice of Nature/Hundred Birds Calling.png"
         },
         {
-          "name": "Cicada Chirping",
-          "file": "Sounds of nature/Cicada Chirping.mp3",
-          "image": "Sounds of nature pic/Cicada Chirping.png"
+          "name": "Rain falls in the leaves",
+          "file": "Voice of Nature data/Rain falls in the leaves.mp3",
+          "image": "Voice of Nature/Rain falls in the leaves.png"
         },
         {
-          "name": "Howling Wind",
-          "file": "Sounds of nature/Howling Wind.mp3",
-          "image": "Sounds of nature pic/Howling Wind.png"
-        },
-        {
-          "name": "Nocturnal Insects",
-          "file": "Sounds of nature/Nocturnal Insects.mp3",
-          "image": "Sounds of nature pic/Nocturnal Insects.png"
-        },
-        {
-          "name": "Seawater Surging",
-          "file": "Sounds of nature/Seawater Surging.mp3",
-          "image": "Sounds of nature pic/Seawater Surging.png"
-        },
-        {
-          "name": "Summer Insects",
-          "file": "Sounds of nature/Summer Insects.mp3",
-          "image": "Sounds of nature pic/Summer Insects.png"
-        },
-        {
-          "name": "waterfall",
-          "file": "Sounds of nature/waterfall.mp3",
-          "image": "Sounds of nature pic/waterfall.png"
+          "name": "Wind blow",
+          "file": "Voice of Nature data/Wind blow.mp3",
+          "image": "Voice of Nature/Wind blow.jpg"
         }
       ]
     }
